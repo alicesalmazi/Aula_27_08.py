@@ -31,7 +31,28 @@ indice = 0
 print("Lista Aleatória (8 itens):")
 while indice < 8:
     if indice == 7:
-        print(f"- {lista[indice]}.")
+        print(f"- {lista[indice]}.\n")
     else:
         print(f"- {lista[indice]};")
     indice += 1
+
+os.system('pause')
+os.system('cls')
+
+# Codwars
+# Jogo Futebol
+
+def pontos(jogos):
+    pontuacao = 0
+    for pontosJogo in jogos:
+        resultado = pontosJogo.split(":")
+        x = resultado[0]
+        y = resultado[1]
+        if x > y:
+            pontuacao += 3
+        elif x < y:
+            pontuacao += 1
+
+    return pontuacao
+
+print(pontos(["3:1", "1:0", "0:2", "0:0"]))
